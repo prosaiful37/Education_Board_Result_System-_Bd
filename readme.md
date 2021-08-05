@@ -4,13 +4,13 @@ This is learning purpose project for student result calculation. We use some pro
 
 #### Language List
 
--- HTML5
--- CSS3
--- JavaScript
--- JQuery
--- PHP
--- MySql
--- OOP
--- PDO 
+- HTML5
+- CSS3
+- JavaScript
+- JQuery
+- PHP
+- MySql
+- OOP
+- PDO 
 
 
