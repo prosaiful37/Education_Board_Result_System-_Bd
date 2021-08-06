@@ -24,7 +24,7 @@
 		 */
 		protected function connection()
 		{
-			$connection new PDO("mysql:host=". $this -> host .";db_name= . $this -> db;", $this -> user,  $this -> pass);
+			$connection new PDO("mysql:host=". $this -> host .";db_name=" . $this -> db, $this -> user,  $this -> pass);
 		}
 
 
