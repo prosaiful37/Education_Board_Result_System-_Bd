@@ -11,7 +11,7 @@
     ],
     "autolad" : {
         "psr-4" : {
-            "Edu\\Board\\" : "App"
+            "Edu\\Board\\" : "app"
         }
     },
     "require": {}

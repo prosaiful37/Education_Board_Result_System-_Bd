@@ -1,34 +1,59 @@
-<?php 
-
-	require_once "../../config.php"
+<?php  
+	
 	namespace Edu\Board\Support;
-	use PDO
 	
-	
+	use PDO;
+
 	/**
-	 * Database Management
+	 * Database  Managements
 	 */
 	abstract class Database
 	{
+		
 		/**
-		 * server information
+		 * Server Information 
 		 */
 		private $host = HOST;
 		private $user = USER;
 		private $pass = PASS;
-		private $db = DB;
+		private $db =  DB ;
 		private $connection;
 
 		/**
-		 * Database connection
+		 * Database connection 		 
 		 */
-		protected function connection()
+		private function connection()
+		{			
+
+			return $this -> connection = new PDO("mysql:host=". $this -> host .";dbname=". $this -> db , $this -> user , $this -> pass);
+				
+		}
+
+
+		/**
+		 * Data check
+		 */
+		public function dataCheck($tbl, $data)
 		{
-			$connection new PDO("mysql:host=". $this -> host .";db_name=" . $this -> db, $this -> user,  $this -> pass);
+			$stmt = $this -> connection() -> prepare("SELECT * FROM $tbl WHERE email='$data' || username='$data' ");
+
+			$stmt -> execute();
+
+			$num = $stmt -> rowCount();
+
+
+			return [
+
+				'num' 	=> $num,
+				'data'	=> $stmt
+
+			];
 		}
 
 
 
+
+			
 
 
 	}
@@ -38,27 +63,3 @@
 
 
 
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- ?>
