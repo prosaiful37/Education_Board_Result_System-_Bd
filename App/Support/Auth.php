@@ -62,6 +62,15 @@
 
 		}
 
+		/**
+		 * logout system
+		 */
+		public function userLogout()
+		{
+			session_destroy();
+			header('location:index.php');
+		}
+
 
 	}
 

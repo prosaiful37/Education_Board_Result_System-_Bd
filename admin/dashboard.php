@@ -9,7 +9,7 @@
                                         <section class="row m-b-md">
                                             <div class="col-sm-6">
                                                 <h3 class="m-b-xs text-black">Dashboard</h3>
-                                                <small>Welcome back, John Smith, <i class="fa fa-map-marker fa-lg text-primary"></i> New York City</small>
+                                                <small>Welcome back, <?php echo $_SESSION['name']; ?>, <i class="fa fa-map-marker fa-lg text-primary"></i> <?php echo $_SESSION['email']; ?></small>
                                             </div>
                                             <div class="col-sm-6 text-right text-left-xs m-t-md">
                                                 <div class="btn-group">

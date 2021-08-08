@@ -1,5 +1,34 @@
 <?php require_once "../config.php"; ?>
 <?php require_once "../vendor/autoload.php"; ?>
+
+<?php 
+
+    
+     use Edu\Board\Support\Auth;
+
+     $auth  = new Auth;
+    
+    
+
+ ?>
+
+ <?php 
+
+
+    /**
+     * logout system
+     */
+
+    if (isset($_GET['logout']) AND $_GET['logout'] == 'success') {
+        $auth -> userLogout();
+    }
+
+
+
+
+
+
+  ?>
 <!DOCTYPE html>
 <html lang="en" class="app">
     <!-- Mirrored from flatfull.com/themes/scale/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Jul 2019 15:13:57 GMT -->
@@ -35,7 +64,7 @@
                             <li><span class="arrow top"></span> <a href="#">Settings</a></li>
                             <li><a href="profile.html">Profile</a></li>
                             <li class="divider"></li>
-                            <li><a href="modal.lockme.html" data-toggle="ajaxModal">Logout</a></li>
+                            <li><a href="?logout=success">Logout</a></li>
                         </ul>
                     </li>
 
