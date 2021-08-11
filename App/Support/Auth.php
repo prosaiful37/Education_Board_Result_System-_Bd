@@ -32,6 +32,7 @@
 					$_SESSION['role'] = $login_user_data['role'];
 					$_SESSION['name'] = $login_user_data['name'];
 					$_SESSION['uname'] = $login_user_data['uname'];
+					$_SESSION['pass'] = $login_user_data['pass'];
 					$_SESSION['email'] = $login_user_data['email'];
 					$_SESSION['cell'] = $login_user_data['cell'];
 					$_SESSION['photo'] = $login_user_data['photo'];
