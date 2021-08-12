@@ -31,30 +31,58 @@
 
 
 		/**
-		 * Data check
+		 * Data create
 		 */
-		public function dataCheck($tbl, $data)
+		public function create()
 		{
-			$stmt = $this -> connection() -> prepare("SELECT * FROM $tbl WHERE email='$data' || username='$data' ");
-			$stmt -> execute();
-			$num = $stmt -> rowCount();
-
-			return [
-
-				'num' 	=> $num,
-				'data'	=> $stmt
-
-			];
+			
 		}
 
+
+
+
 		/**
-		 * 
+		 * find data by id
 		 */
-		public function dataCheckPro($tbl, array $data, $condation = 'AND')
+		public function find($id)
+		{
+			
+		}
+
+
+		/**
+		 * delete data by id
+		 */
+		public function delete($id)
+		{
+			
+		}
+
+
+		/**
+		 * All data show
+		 */
+		public function all($tbl)
+		{
+			
+		}
+
+
+
+
+
+
+
+
+
+		/**
+		 * Data Check method
+		 */
+		public function dataCheck($tbl, array $data, $condation = 'AND')
 		{
 
 			foreach($data as $key => $val){
-				$query_string = $key . "= '$val' AND ";
+				$query_string = $key . "= '$val' $condation ";
 
 			}
 
@@ -68,7 +96,12 @@
 			$stmt = $this -> connection() -> prepare("SELECT * FROM $tbl WHERE $final_qeury_string");
 			$stmt -> execute();
 
-			$stmt -> rowCount();
+			$num =  $stmt -> rowCount();
+
+			return[
+				'num'	=> $num,
+				'data'	=> $stmt,
+			];
 		}
 
 
