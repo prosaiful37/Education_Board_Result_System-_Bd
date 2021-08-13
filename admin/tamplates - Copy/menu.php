@@ -34,20 +34,20 @@
 <!-- nav -->
 <nav class="nav-primary hidden-xs">
     <div class="text-muted text-sm hidden-nav-xs padder m-t-sm m-b-sm">Start</div>
-    <ul id="dashmenu" class="nav nav-main" data-ride="collapse">
-        <li class="">
+    <ul class="nav nav-main" data-ride="collapse">
+        <li class="active">
             <a href="dashboard.php" class="auto"> <i class="i i-statistics icon"> </i> <span class="font-bold">Dashboard</span> </a>
         </li>
         <li class="">
-            <a href="student.php" class="auto"> <i class="i i-statistics icon"> </i> <span class="font-bold">Students</span> </a>
+            <a href="dashboard.php" class="auto"> <i class="i i-statistics icon"> </i> <span class="font-bold">Students</span> </a>
         </li>
 
         <li class="">
-            <a href="user.php" class="auto"> <i class="i i-statistics icon"> </i> <span class="font-bold">User</span> </a>
+            <a href="dashboard.php" class="auto"> <i class="i i-statistics icon"> </i> <span class="font-bold">User</span> </a>
         </li>
 
         <li class="">
-            <a href="result.php" class="auto"> <i class="i i-statistics icon"> </i> <span class="font-bold">Result</span> </a>
+            <a href="dashboard.php" class="auto"> <i class="i i-statistics icon"> </i> <span class="font-bold">Result</span> </a>
         </li>
 
 
