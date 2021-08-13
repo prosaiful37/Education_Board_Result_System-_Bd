@@ -49,23 +49,27 @@
             </div>
             <div style="background-color:#1AAE88;" class="modal-body">
              <form id="add_student_form" action="" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <input name="name" class="form-control" type="text" placeholder="Name">
+                <div class="form-group text-dark">
+                    <label for="">Name</label>
+                    <input name="name" class="form-control" type="text">
                 </div>
-                <div class="form-group">
-                    <input name="roll" class="form-control" type="text" placeholder="Roll">
+                <div class="form-group text-dark">
+                    <label for="">E-mail</label>
+                    <input name="email" class="form-control" type="text">
                 </div>
-                <div class="form-group">
-                    <input name="email" class="form-control" type="text" placeholder="E-mail">
+                <div class="form-group text-dark">
+                    <label for="">Cell</label>
+                    <input name="cell" class="form-control" type="text">
                 </div>
-                <div class="form-group">
-                    <input name="cell" class="form-control" type="text" placeholder="Cell">
-                </div><!-- 
-                <div class="form-group" style="font-size:30px; cursor: pointer;">
-                    <img style="display: block; width: 250px; height:auto;" id="student_photo_load" src="" alt="">
-                    <input name="photo" style="display: none;" type="file" id="student_photo">
-                    <label for="student_photo"><i class="fas fa-photo-video"></i></label>
-                </div> -->
+                <div class="form-group text-dark">
+                    <label for="">Role</label>
+                    <select class="form-control" name="" id="">
+                        <option value="">- select -</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Teacher">Teacher</option>
+                        <option value="Staff">Staff</option>
+                    </select>
+                </div>
                 <div class="form-group">
                     <input name="photo" type="file">
                 </div>
