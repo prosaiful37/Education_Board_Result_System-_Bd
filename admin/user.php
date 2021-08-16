@@ -44,14 +44,18 @@
             <div class="modal-content">
             <div class="modal-header">
                 <h3>Add New User</h3>
-                <div class="mess"></div>
+               <!--  <div class="mess"></div> -->
                 <hr>
             </div>
             <div style="background-color:#1AAE88;" class="modal-body">
-             <form id="add_student_form" action="" method="POST" enctype="multipart/form-data">
+             <form id="add_user_form" action="" method="POST" enctype="multipart/form-data">
                 <div class="form-group text-dark">
                     <label for="">Name</label>
                     <input name="name" class="form-control" type="text">
+                </div>
+                <div class="form-group text-dark">
+                    <label for="">Username</label>
+                    <input name="uname" class="form-control" type="text">
                 </div>
                 <div class="form-group text-dark">
                     <label for="">E-mail</label>
@@ -63,18 +67,15 @@
                 </div>
                 <div class="form-group text-dark">
                     <label for="">Role</label>
-                    <select class="form-control" name="" id="">
-                        <option value="">- select -</option>
+                    <select class="form-control" name="role" id="">
+                        <option value="">-select-</option>
                         <option value="Admin">Admin</option>
                         <option value="Teacher">Teacher</option>
                         <option value="Staff">Staff</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <input name="photo" type="file">
-                </div>
-                <div class="form-group">
-                    <input class="btn btn-dark btn-block" type="submit" value="Add User">
+                    <input name="add" class="btn btn-dark btn-block" type="submit" value="Add User">
                 </div>
              </form>
             </div>
@@ -86,6 +87,7 @@
 
     <div class="row">
         <div class="col-sm-12">
+            <div class="mess"></div>
             <a id="add_user_btn" class="btn btn-sm btn-info" href="#">Add New User</a>
             <br>
             <br>
@@ -104,82 +106,8 @@
                     <th>Action</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Saiful Islam</td>
-                    <td>saiful@gmail.com</td>
-                    <td>01636758237</td>
-                    <td>admin</td>
-                    <td><img style="width: 50px; height: 40px; " src="images/aa.jpg" alt=""></td>
-                    <td>Active</td>
-                    <td>
-                        <a class="btn btn-sm btn-info" href="#">View</a>
-                        <a class="btn btn-sm btn-warning" href="#">Edit</a>
-                        <a class="btn btn-sm btn-danger" href="#">Delete</a>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Saiful Islam</td>
-                    <td>saiful@gmail.com</td>
-                    <td>01636758237</td>
-                    <td>admin</td>
-                    <td><img style="width: 50px; height: 40px; " src="images/aa.jpg" alt=""></td>
-                    <td>Active</td>
-                    <td>
-                        <a class="btn btn-sm btn-info" href="#">View</a>
-                        <a class="btn btn-sm btn-warning" href="#">Edit</a>
-                        <a class="btn btn-sm btn-danger" href="#">Delete</a>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Saiful Islam</td>
-                    <td>saiful@gmail.com</td>
-                    <td>01636758237</td>
-                    <td>admin</td>
-                    <td><img style="width: 50px; height: 40px; " src="images/aa.jpg" alt=""></td>
-                    <td>Active</td>
-                    <td>
-                        <a class="btn btn-sm btn-info" href="#">View</a>
-                        <a class="btn btn-sm btn-warning" href="#">Edit</a>
-                        <a class="btn btn-sm btn-danger" href="#">Delete</a>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Saiful Islam</td>
-                    <td>saiful@gmail.com</td>
-                    <td>01636758237</td>
-                    <td>admin</td>
-                    <td><img style="width: 50px; height: 40px; " src="images/aa.jpg" alt=""></td>
-                    <td>Active</td>
-                    <td>
-                        <a class="btn btn-sm btn-info" href="#">View</a>
-                        <a class="btn btn-sm btn-warning" href="#">Edit</a>
-                        <a class="btn btn-sm btn-danger" href="#">Delete</a>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Saiful Islam</td>
-                    <td>saiful@gmail.com</td>
-                    <td>01636758237</td>
-                    <td>admin</td>
-                    <td><img style="width: 50px; height: 40px; " src="images/aa.jpg" alt=""></td>
-                    <td>Active</td>
-                    <td>
-                        <a class="btn btn-sm btn-info" href="#">View</a>
-                        <a class="btn btn-sm btn-warning" href="#">Edit</a>
-                        <a class="btn btn-sm btn-danger" href="#">Delete</a>
-
-                    </td>
-                </tr>
+            <tbody id="all_users_tbody">
+                
             </tbody>
         </table>
     </section>

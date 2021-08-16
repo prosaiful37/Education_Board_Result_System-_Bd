@@ -10,7 +10,6 @@
 	 */
 	class Auth extends Database
 	{
-		
 
 		/**
 		 * login class managemetn
