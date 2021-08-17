@@ -1,16 +1,18 @@
 (function($){
 	$(document).ready(function(){
 		
-		//dashmenu active 
-		// $(document).on('click', 'ul#dashmenu li', function (){
-		// 	$('ul#dashmenu li').removeClass('active');
-		// 	$(this).addClass('active');
-		// });
-
+	
 
 		//add new user modal
 		$(document).on('click','#add_user_btn', function(){
 			$('#add_user_modal').modal('show');
+
+			return false;
+		});
+
+		//add new student modal
+		$(document).on('click','#add_student_btn', function(){
+			$('#add_student_modal').modal('show');
 
 			return false;
 		});
@@ -77,6 +79,22 @@
 
 			}else {
 				return false;
+			}
+
+		});
+
+
+		//add new student
+		$(document).on('submit','form#add_student_form', function(e){
+			e.preventDefault();
+
+			//get val
+			let name = $('form#add_student_form input[name="name"]').val();
+			let roll = $('form#add_student_form input[name="roll"]').val();
+			let reg  = $('form#add_student_form input[name="reg"]').val();
+
+			if (name == "" || roll == "" || reg == "") {
+				$("<p class=\"alert alert-danger\"> All fields are required ! <button class=\"close\" data-dismiss=\"alert\">&times;</button></p>")
 			}
 
 		});

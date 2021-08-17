@@ -39,40 +39,91 @@
      
 
     <!-- modal -->
-    <div id="add_user_modal" class="modal fade">
+    <div id="add_student_modal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
-            <div class="modal-header">
-                <h3>Add New Student</h3>
+            <div class="modal-header bg-info text-dark">
+                <h2>Add New Student</h2>
                 <div class="mess"></div>
                 <hr>
             </div>
-            <div style="background-color:#1AAE88;" class="modal-body">
-             <form id="add_student_form" action="" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <input name="name" class="form-control" type="text" placeholder="Name">
-                </div>
-                <div class="form-group">
-                    <input name="roll" class="form-control" type="text" placeholder="Roll">
-                </div>
-                <div class="form-group">
-                    <input name="email" class="form-control" type="text" placeholder="E-mail">
-                </div>
-                <div class="form-group">
-                    <input name="cell" class="form-control" type="text" placeholder="Cell">
-                </div><!-- 
-                <div class="form-group" style="font-size:30px; cursor: pointer;">
-                    <img style="display: block; width: 250px; height:auto;" id="student_photo_load" src="" alt="">
-                    <input name="photo" style="display: none;" type="file" id="student_photo">
-                    <label for="student_photo"><i class="fas fa-photo-video"></i></label>
-                </div> -->
-                <div class="form-group">
-                    <input name="photo" type="file">
-                </div>
-                <div class="form-group">
-                    <input class="btn btn-dark btn-block" type="submit" value="Add User">
-                </div>
-             </form>
+            <div style="background-color:#FAFF7F;" class="modal-body">
+                <form id="add_student_form" action="" method="POST" enctype="multipart/form-data">
+                    <div class="form-group text-dark">
+                        <label for="">Name</label>
+                        <input name="name" class="form-control" type="text">
+                    </div>
+                    <div class="form-group text-dark">
+                        <label for="">Roll</label>
+                        <input name="roll" class="form-control" type="text">
+                    </div>
+                    <div class="form-group text-dark">
+                        <label for="">Reg</label>
+                        <input name="reg" class="form-control" type="text">
+                    </div>
+                    <div class="form-group text-dark">
+                        <label for="">Board</label>
+                        <select  class="form-control" name="board" id="">
+                          <option value="" selected="">Select One</option>
+                          <option value="barisal">Barisal</option>
+                          <option value="chittagong">Chittagong</option>
+                          <option value="comilla">Comilla</option>
+                          <option value="dhaka">Dhaka</option>
+                          <option value="dinajpur">Dinajpur</option>
+                          <option value="jessore">Jessore</option>
+                          <option value="rajshahi">Rajshahi</option>
+                          <option value="sylhet">Sylhet</option>
+                          <option value="madrasah">Madrasah</option>
+                          <option value="tec">Technical</option>
+                          <option value="dibs">DIBS(Dhaka)</option>
+                        </select>
+                    </div>
+                    <div class="form-group text-dark">
+                        <label for="">Institute</label>
+                        <input name="inst" class="form-control" type="text">
+                    </div>
+                    <div class="form-group text-dark">
+                        <label for="">Year</label>
+                        <select class="form-control" name="year" id="">
+                            <option value="0000" selected="">Select One</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                        </select>
+                    </div>
+                    <div class="form-group text-dark">
+                        <label for="">Exam</label>
+                        <select class="form-control" name="exam" id="">
+                            <option value="hsc">HSC/Alim/Equivalent</option>
+                            <option value="jsc">JSC/JDC</option>
+                            <option value="ssc">SSC/Dakhil</option>
+                            <option value="ssc_voc">SSC(Vocational)</option>
+                            <option value="hsc">HSC/Alim</option>
+                            <option value="hsc_voc">HSC(Vocational)</option>
+                            <option value="hsc_hbm">HSC(BM)</option>
+                            <option value="hsc_dic">Diploma in Commerce</option>
+                            <option value="hsc">Diploma in Business Studies</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <input name="add" class="btn btn-info btn-block" type="submit" value="Add Student">
+                    </div>
+                 </form>
             </div>
                <!--  <div class="modal-footer"></div> -->
             </div>
@@ -82,7 +133,7 @@
 
     <div class="row">
         <div class="col-sm-10">
-            <a id="add_user_btn" class="btn btn-sm btn-info" href="#">Add New Student</a>
+            <a id="add_student_btn" class="btn btn-sm btn-info" href="#">Add New Student</a>
             <br>
             <br>
     <section class="panel panel-default">

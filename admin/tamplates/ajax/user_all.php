@@ -22,9 +22,10 @@
 	 <tr>
 	    <td><?php echo $i; $i++; ?></td>
 	    <td><?php echo $val['name']; ?></td>
+	    <td><?php echo $val['username']; ?></td>
 	    <td><?php echo $val['email']; ?></td>
 	    <td><?php echo $val['cell']; ?></td>
-	    <td><?php echo $val['username']; ?></td>
+	    <td><?php echo $val['role']; ?></td>
 	    <td><img style="width: 50px; height: 40px; " src="images/<?php echo $val['photo']; ?>" alt=""></td>
 	    <td><?php echo $val['status']; ?></td>
 	    <td>

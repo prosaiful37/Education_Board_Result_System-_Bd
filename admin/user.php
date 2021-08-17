@@ -6,7 +6,7 @@
     $user = new User;
     
 
-
+    
 
  ?>
 
@@ -98,6 +98,7 @@
                 <tr>
                     <th>#</th>
                     <th>Name</th>
+                    <th>Username</th>
                     <th>E-mail</th>
                     <th>Cell</th>
                     <th>Role</th>
