@@ -82,7 +82,7 @@
 
     <div class="row">
         <div class="col-sm-10">
-            <a id="add_user_btn" class="btn btn-sm btn-info" href="#">Add New Result</a>
+            <a id="add_user_btn" class="btn btn-sm btn-info" href="#">Add Student Result</a>
             <br>
             <br>
     <section class="panel panel-default">
