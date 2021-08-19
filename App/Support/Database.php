@@ -31,6 +31,34 @@
 
 
 		/**
+		 * File upload management 
+		 */
+		protected function fileUpload($file, $location = '', array $file_type = ['jpg','png','jpeg','gif'])
+		{
+			//file info
+			$file_name = $file['name'];
+			$file_tmp = $file['tmp_name'];
+			$file_size = $file['size'];
+
+			//get file extension 
+			$file_array = explode('.', $file_name);
+			$file_extension = strtolower(end($file_array));
+
+			//Unique file_name
+			$unique_file_name = md5(time(). rand()) .'.'.$file_extension;
+
+			//fileUpload
+			move_uploaded_file($file_tmp, $location . $unique_file_name);
+
+			return $unique_file_name; 
+
+		}
+
+
+
+
+
+		/**
 		 * Data create
 		 */
 		public function create($table, $data)
@@ -105,6 +133,22 @@
 
 			return $stmt;
 		}
+
+		
+
+		/**
+		 * sigle  data show
+		 */
+
+		// public function find($tbl, $id)
+		// {
+		// 	$sql = "SELECT * FROM student WHERE id='$id";
+		// 	$stmt = $this -> connection() -> prepare($sql);
+		// 	$stmt -> execute();
+
+		// 	return $stmt;
+			
+		// }
 
 
 

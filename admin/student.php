@@ -44,7 +44,7 @@
             <div class="modal-content">
             <div class="modal-header bg-info text-dark">
                 <h2>Add New Student</h2>
-                <div class="mess"></div>
+                <div class="student-mess"></div>
                 <hr>
             </div>
             <div style="background-color:#FAFF7F;" class="modal-body">
@@ -119,7 +119,10 @@
                             <option value="hsc">Diploma in Business Studies</option>
                         </select>
                     </div>
-
+                    <div class="form-group text-dark">
+                        <label for="">Photo</label>
+                        <input name="photo" class="form-control" type="file">
+                    </div>
                     <div class="form-group">
                         <input name="add" class="btn btn-info btn-block" type="submit" value="Add Student">
                     </div>
@@ -131,8 +134,11 @@
     </div>
 
 
+
+
     <div class="row">
-        <div class="col-sm-10">
+        <div class="col-sm-12">
+            <div class="mess"></div>
             <a id="add_student_btn" class="btn btn-sm btn-info" href="#">Add New Student</a>
             <br>
             <br>
@@ -143,90 +149,20 @@
                 <tr>
                     <th>#</th>
                     <th>Name</th>
-                    <th>E-mail</th>
-                    <th>Cell</th>
-                    <th>Role</th>
+                    <th>Roll</th>
+                    <th>Regstration</th>
+                    <th>Board</th>
+                    <th>Institute</th>
+                    <th>Exam</th>
+                    <th>Year</th>
                     <th>Photo</th>
                     <th>Status</th>
                     <th>Action</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Saiful Islam</td>
-                    <td>saiful@gmail.com</td>
-                    <td>01636758237</td>
-                    <td>admin</td>
-                    <td><img style="width: 50px; height: 40px; " src="images/aa.jpg" alt=""></td>
-                    <td>Active</td>
-                    <td>
-                        <a class="btn btn-sm btn-info" href="#">View</a>
-                        <a class="btn btn-sm btn-warning" href="#">Edit</a>
-                        <a class="btn btn-sm btn-danger" href="#">Delete</a>
+            <tbody id="student_alls">
+           
 
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Saiful Islam</td>
-                    <td>saiful@gmail.com</td>
-                    <td>01636758237</td>
-                    <td>admin</td>
-                    <td><img style="width: 50px; height: 40px; " src="images/aa.jpg" alt=""></td>
-                    <td>Active</td>
-                    <td>
-                        <a class="btn btn-sm btn-info" href="#">View</a>
-                        <a class="btn btn-sm btn-warning" href="#">Edit</a>
-                        <a class="btn btn-sm btn-danger" href="#">Delete</a>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Saiful Islam</td>
-                    <td>saiful@gmail.com</td>
-                    <td>01636758237</td>
-                    <td>admin</td>
-                    <td><img style="width: 50px; height: 40px; " src="images/aa.jpg" alt=""></td>
-                    <td>Active</td>
-                    <td>
-                        <a class="btn btn-sm btn-info" href="#">View</a>
-                        <a class="btn btn-sm btn-warning" href="#">Edit</a>
-                        <a class="btn btn-sm btn-danger" href="#">Delete</a>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Saiful Islam</td>
-                    <td>saiful@gmail.com</td>
-                    <td>01636758237</td>
-                    <td>admin</td>
-                    <td><img style="width: 50px; height: 40px; " src="images/aa.jpg" alt=""></td>
-                    <td>Active</td>
-                    <td>
-                        <a class="btn btn-sm btn-info" href="#">View</a>
-                        <a class="btn btn-sm btn-warning" href="#">Edit</a>
-                        <a class="btn btn-sm btn-danger" href="#">Delete</a>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Saiful Islam</td>
-                    <td>saiful@gmail.com</td>
-                    <td>01636758237</td>
-                    <td>admin</td>
-                    <td><img style="width: 50px; height: 40px; " src="images/aa.jpg" alt=""></td>
-                    <td>Active</td>
-                    <td>
-                        <a class="btn btn-sm btn-info" href="#">View</a>
-                        <a class="btn btn-sm btn-warning" href="#">Edit</a>
-                        <a class="btn btn-sm btn-danger" href="#">Delete</a>
-
-                    </td>
-                </tr>
             </tbody>
         </table>
     </section>
@@ -238,6 +174,37 @@
 
    
 
+    <!-- single student modal -->
+
+    <div id="view_single_student" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header bg-info text-dark">
+                <h2>The single data of : Saiful islam</h2>
+                <hr>
+            </div>
+            <div style="background-color:#FAFF7F;" class="modal-body">
+               <img style="width: 250px; height: 250px; border: 7px solid white; border-radius: 50%;>" class="d-block mx-auto shadow" src="media/img/student/" alt="">
+                <br>
+                <h1 style="text-align: center; font-family: Inconsolata; color: #FFC107;"></h1>
+                <table class="table">
+                    <tr style="background-color: #CFD5EA;">
+                        <td>Name</td>
+                        <td>name</td>
+                    </tr>
+                    <tr style="background-color: #E9EBF5;">
+                        <td>E-mail </td>
+                        <td></td>
+                    </tr>
+                    <tr style="background-color: #CFD5EA;">
+                        <td>Cell </td>
+                        <td></td>
+                    </tr>
+            </div>
+               <!--  <div class="modal-footer"></div> -->
+            </div>
+        </div>
+    </div>
 
 
 

@@ -94,16 +94,68 @@
 			let reg  = $('form#add_student_form input[name="reg"]').val();
 
 			if (name == "" || roll == "" || reg == "") {
-				$("<p class=\"alert alert-danger\"> All fields are required ! <button class=\"close\" data-dismiss=\"alert\">&times;</button></p>")
+				$('.student-mess').html("<p class=\"alert alert-danger\"> All fields are required ! <button class=\"close\" data-dismiss=\"alert\">&times;</button></p>");
+			}else{
+				//student data create
+				$.ajax({
+					url : 'tamplates/ajax/student_add.php',
+					method : "POST",
+					data : new FormData(this),
+					contentType : false,
+					processData : false,
+					success : function(data){
+						$('form#add_student_form')[0].reset();
+						$('#add_student_modal').modal('hide');
+						$('.mess').html("<p class=\"alert alert-success\"> Student Added Succssful ! <button class=\"close\" data-dismiss=\"alert\">&times;</button></p>");
+						allStudent();
+					}
+				});
 			}
 
 		});
 
+		//all student show
+		function allStudent(){
+			$.ajax({
+				url : 'tamplates/ajax/student_all.php',
+				success : function(data){
+					$('table tbody#student_alls').html(data);
+				}
+			});
+		}
+
+		allStudent();
 
 
 
+		//single studnet data show
+		$(document).on('click','#single_student', function(){
+			$('#view_single_student').modal('show');
+
+			return false;
+		});
+
+		//single data show
+		$(document).on('click','a#single_student',function(e){
+			e.preventDefault();
+
+			let id = $(this).attr('user_id');
+
+			
+
+				$.ajax({
+					url : "tamplates/ajax/single_student.php",
+					method : "GET",
+					data : {id : id},
+					success : function(data){
+						//$('.mess').html(data);
+											}
+				});
+
+				allStudent();
 
 
+		});
 
 
 
