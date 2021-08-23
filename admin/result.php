@@ -39,7 +39,7 @@
      
 
     <!-- modal -->
-    <div id="add_user_modal" class="modal fade">
+    <div id="add_result_modal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -47,30 +47,40 @@
                 <div class="mess"></div>
                 <hr>
             </div>
-            <div style="background-color:#1AAE88;" class="modal-body">
-             <form id="add_student_form" action="" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <input name="name" class="form-control" type="text" placeholder="Name">
+            <div style="background-color:#405453;" class="modal-body">
+             <form id="add_user_form" action="" method="POST" enctype="multipart/form-data">
+                <div class="form-group text-warning">
+
+                    <div class="stu_res"></div>
+                    <label id="idStudnet" for="">Search Student</label>
+                    <input id="student_search" name="search" class="form-control" type="text">
+                </div>
+                <div class="form-group text-warning">
+                    <label for="">Bangla</label>
+                    <input name="uname" class="form-control" type="text">
+                </div>
+                <div class="form-group text-warning">
+                    <label for="">English</label>
+                    <input name="email" class="form-control" type="text">
+                </div>
+                <div class="form-group text-warning">
+                    <label for="">Math</label>
+                    <input name="cell" class="form-control" type="text">
+                </div>
+                <div class="form-group text-warning">
+                    <label for="">Social Science</label>
+                    <input name="cell" class="form-control" type="text">
+                </div>
+                <div class="form-group text-warning">
+                    <label for="">Science</label>
+                    <input name="cell" class="form-control" type="text">
+                </div>
+                <div class="form-group text-warning">
+                    <label for="">Religion</label>
+                    <input name="cell" class="form-control" type="text">
                 </div>
                 <div class="form-group">
-                    <input name="roll" class="form-control" type="text" placeholder="Roll">
-                </div>
-                <div class="form-group">
-                    <input name="email" class="form-control" type="text" placeholder="E-mail">
-                </div>
-                <div class="form-group">
-                    <input name="cell" class="form-control" type="text" placeholder="Cell">
-                </div><!-- 
-                <div class="form-group" style="font-size:30px; cursor: pointer;">
-                    <img style="display: block; width: 250px; height:auto;" id="student_photo_load" src="" alt="">
-                    <input name="photo" style="display: none;" type="file" id="student_photo">
-                    <label for="student_photo"><i class="fas fa-photo-video"></i></label>
-                </div> -->
-                <div class="form-group">
-                    <input name="photo" type="file">
-                </div>
-                <div class="form-group">
-                    <input class="btn btn-dark btn-block" type="submit" value="Add User">
+                    <input name="add" class="btn btn-info btn-block" type="submit" value="Add User">
                 </div>
              </form>
             </div>
@@ -81,8 +91,8 @@
 
 
     <div class="row">
-        <div class="col-sm-10">
-            <a id="add_user_btn" class="btn btn-sm btn-info" href="#">Add Student Result</a>
+        <div class="col-sm-12">
+            <a id="add_result_btn" class="btn btn-sm btn-info" href="#">Add Student Result</a>
             <br>
             <br>
     <section class="panel panel-default">

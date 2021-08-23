@@ -17,6 +17,22 @@
 			return false;
 		});
 
+
+		
+
+
+
+		//add new result modal
+		$(document).on('click','#add_result_btn', function(){
+			$('#add_result_modal').modal('show');
+
+			return false;
+		});
+
+
+		
+
+
 		//all data show user
 		function allUser(){
 
@@ -136,25 +152,59 @@
 		});
 
 		//single data show
-		$(document).on('click','a#single_student',function(e){
-			e.preventDefault();
+		// $(document).on('click','a#single_student',function(e){
+		// 	e.preventDefault();
 
-			let id = $(this).attr('user_id');
+		// 	let id = $(this).attr('user_id');
 
 			
 
-				$.ajax({
-					url : "tamplates/ajax/single_student.php",
-					method : "GET",
-					data : {id : id},
-					success : function(data){
-						//$('.mess').html(data);
-											}
-				});
+		// 		$.ajax({
+		// 			url : "tamplates/ajax/single_student.php",
+		// 			method : "GET",
+		// 			data : {id : id},
+		// 			success : function(data){
+		// 				//$('.mess').html(data);
+		// 									}
+		// 		});
 
-				allStudent();
+		// 		allStudent();
 
 
+		// });
+
+		//search student
+
+		$(document).on('keyup','input#student_search', function(){
+			let stu_val = $(this).val();
+
+			$.ajax({
+				url : "tamplates/ajax/student_search.php",
+				method : "POST",
+				data : { stu_val : stu_val  },
+				success : function(data){
+					$('.stu_res').html(data);
+				}
+
+
+			});
+		});
+
+		//id receive
+		$(document).on('click','li#student_select', function(){
+			//get all studnet value
+			let stu_id = $(this).attr('student_id');
+			let stu_name = $(this).attr('student_name');
+			let stu_roll = $(this).attr('student_roll');
+			let stu_reg = $(this).attr('student_reg');
+			let stu_photo = $(this).attr('student_photo');
+
+
+			//set values
+			$('input#student_search').val(stu_id);
+			$('.stu_res').hide();
+			$('label#idStudnet').text('Student ID');
+			$('input#student_search').attr('disabled', '');
 		});
 
 

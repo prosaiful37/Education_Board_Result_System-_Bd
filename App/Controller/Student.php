@@ -54,7 +54,16 @@
 
 
 	  
+	/**
+	 * search student
+	 */
 
+	public function studentSearch($search)
+	{
+		$data = $this -> customQuery("SELECT * FROM student WHERE name LIKE '%$search%' || roll LIKE '%search%' || reg LIKE '%search%'");
+
+		return $data -> fetchAll(PDO::FETCH_ASSOC);
+	}
 
 
 
