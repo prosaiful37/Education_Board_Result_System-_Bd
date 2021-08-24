@@ -220,7 +220,28 @@
 
 		});
 
+		//add student result
 
+		$(document).on('submit','form#add_student_result', function(e){
+			e.preventDefault();
+
+			$('input#student_search').removeAttr('disabled');
+
+			$.ajax({
+				url : 'tamplates/ajax/result_add.php',
+				method : "POST",
+				data : new FormData(this),
+				contentType : false,
+				processData : false,
+				success : function(data){
+					alert(data);
+
+				}
+
+
+			});
+
+		});
 
 
 	});

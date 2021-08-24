@@ -39,11 +39,11 @@
      
 
     <!-- modal -->
-    <div id="add_result_modal" class="modal fade">
+    <div id="add_result_modal" class="modal fade shadow">
         <div class="modal-dialog">
             <div class="modal-content"></div>
-            <div style="background-color:#405453;" class="modal-body">
-                <h3>Add New Result</h3>
+            <div style="background-color:#405453;" class="modal-body ">
+                <h3 class="text-warning">Add New Result</h3>
                 <div class="mess"></div>
                 <hr>
                 <div class="student_res_data">
@@ -51,38 +51,38 @@
                     <h2 class="text-center text-warning"><h2>
                     <h4 class="text-center text-warning"></h4>
                 </div>
-             <form id="add_user_form" action="" method="POST" enctype="multipart/form-data">
+             <form id="add_student_result" action="" method="POST">
                 <div class="form-group text-warning">
                     <div class="stu_res"></div>
                     <label id="idStudnet" for="">Search Student</label>
-                    <input id="student_search" name="search" class="form-control" type="text">
+                    <input id="student_search" name="student_id" class="form-control" type="text">
                 </div>
                 <div class="form-group text-warning">
                     <label for="">Bangla</label>
-                    <input name="uname" class="form-control" type="text">
+                    <input name="bangla" class="form-control" type="text">
                 </div>
                 <div class="form-group text-warning">
                     <label for="">English</label>
-                    <input name="email" class="form-control" type="text">
+                    <input name="english" class="form-control" type="text">
                 </div>
                 <div class="form-group text-warning">
                     <label for="">Math</label>
-                    <input name="cell" class="form-control" type="text">
+                    <input name="math" class="form-control" type="text">
                 </div>
                 <div class="form-group text-warning">
                     <label for="">Social Science</label>
-                    <input name="cell" class="form-control" type="text">
+                    <input name="social_science" class="form-control" type="text">
                 </div>
                 <div class="form-group text-warning">
                     <label for="">Science</label>
-                    <input name="cell" class="form-control" type="text">
+                    <input name="science" class="form-control" type="text">
                 </div>
                 <div class="form-group text-warning">
                     <label for="">Religion</label>
-                    <input name="cell" class="form-control" type="text">
+                    <input name="religion" class="form-control" type="text">
                 </div>
                 <div class="form-group">
-                    <input name="add" class="btn btn-info btn-block" type="submit" value="Add User">
+                    <input name="add" class="btn btn-info btn-block" type="submit" value="Add Result">
                 </div>
              </form>
             </div>

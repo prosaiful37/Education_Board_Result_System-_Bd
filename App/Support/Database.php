@@ -136,26 +136,6 @@
 
 		
 
-		/**
-		 * sigle  data show
-		 */
-
-		// public function find($tbl, $id)
-		// {
-		// 	$sql = "SELECT * FROM student WHERE id='$id";
-		// 	$stmt = $this -> connection() -> prepare($sql);
-		// 	$stmt -> execute();
-
-		// 	return $stmt;
-			
-		// }
-
-
-
-
-
-
-
 
 
 		/**
