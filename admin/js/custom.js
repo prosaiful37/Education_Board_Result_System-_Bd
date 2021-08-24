@@ -191,13 +191,16 @@
 		});
 
 		//id receive
+		$('.student_res_data').hide();
 		$(document).on('click','li#student_select', function(){
-			//get all studnet value
+			
+
+			//get studnet value
 			let stu_id = $(this).attr('student_id');
 			let stu_name = $(this).attr('student_name');
 			let stu_roll = $(this).attr('student_roll');
 			let stu_reg = $(this).attr('student_reg');
-			let stu_photo = $(this).attr('student_photo');
+			let student_pic = $(this).attr('student_pic');
 
 
 			//set values
@@ -205,6 +208,16 @@
 			$('.stu_res').hide();
 			$('label#idStudnet').text('Student ID');
 			$('input#student_search').attr('disabled', '');
+
+			//single student data
+			$('.student_res_data').show();
+			$('.student_res_data img').attr('src', 'students/' + student_pic);
+			$('.student_res_data h2').html(stu_name);
+			$('.student_res_data h4').html('<strong> Roll : </strong>' + stu_roll + '<strong> Reg : </strong>' + stu_reg);
+
+
+
+
 		});
 
 

@@ -41,16 +41,18 @@
     <!-- modal -->
     <div id="add_result_modal" class="modal fade">
         <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-content"></div>
+            <div style="background-color:#405453;" class="modal-body">
                 <h3>Add New Result</h3>
                 <div class="mess"></div>
                 <hr>
-            </div>
-            <div style="background-color:#405453;" class="modal-body">
+                <div class="student_res_data">
+                    <img style="width: 200px;height: 200px;border: 10px solid gray;display: block;margin: auto; " src="" alt="">
+                    <h2 class="text-center text-warning"><h2>
+                    <h4 class="text-center text-warning"></h4>
+                </div>
              <form id="add_user_form" action="" method="POST" enctype="multipart/form-data">
                 <div class="form-group text-warning">
-
                     <div class="stu_res"></div>
                     <label id="idStudnet" for="">Search Student</label>
                     <input id="student_search" name="search" class="form-control" type="text">
