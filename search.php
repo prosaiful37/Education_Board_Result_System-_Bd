@@ -1,5 +1,16 @@
 <?php 
 
+	require 'config.php';
+	require 'vendor/autoload.php';
+
+	use Edu\Board\Controller\Result;
+
+	$res = new Result;
+
+
+	/**
+	 * search Result validate
+	 */
 	if (isset($_POST['result'])) {
 		//get value
 		$exam = $_POST['exam'];
@@ -7,6 +18,11 @@
 		$year = $_POST['year'];
 		$roll = $_POST['roll'];
 		$reg = $_POST['reg'];
+
+
+		$result_data = $res -> serachResult($exam, $board, $year, $roll, $reg);
+
+		
 	}else{
 		header('location:index.php');
 	}
@@ -43,29 +59,29 @@
 
 				<div class="student-info">
 					<div class="student-photo">
-						<img src="assets/images/Piet-Olivier-photo-passport-size.jpeg" alt="">
+						<img src="admin/students/<?php echo $result_data['photo']; ?>" alt="">
 					</div>
 					<div class="student-details">
 						<table>
 							<tr>
 								<td>Name</td>
-								<td>Asraful Haque</td>
+								<td><?php echo $result_data['name']; ?></td>
 							</tr>
 							<tr>
 								<td>Roll</td>
-								<td>505050</td>
+								<td><?php echo $result_data['roll']; ?></td>
 							</tr>
 							<tr>
 								<td>Reg.</td>
-								<td>101010</td>
+								<td><?php echo $result_data['reg']; ?></td>
 							</tr>
 							<tr>
 								<td>Board</td>
-								<td>Dhaka</td>
+								<td><?php echo $result_data['board']; ?></td>
 							</tr>
 							<tr>
 								<td>Institute</td>
-								<td>CT</td>
+								<td><?php echo $result_data['inst']; ?></td>
 							</tr>
 							<tr>
 								<td>Result</td>
@@ -87,38 +103,38 @@
 						</tr>
 						<tr>
 							<td>Bangla</td>
-							<td>89</td>
+							<td><?php echo $result_data['bangla']; ?></td>
 							<td>5</td>
 							<td>4.8</td>
 							<td rowspan="6">4.8</td>
 						</tr>
 						<tr>
-							<td>Bangla</td>
-							<td>89</td>
+							<td>English</td>
+							<td><?php echo $result_data['english']; ?></td>
 							<td>5</td>
 							<td>4.8</td>
 						</tr>
 						<tr>
-							<td>Bangla</td>
-							<td>89</td>
+							<td>Math</td>
+							<td><?php echo $result_data['math']; ?></td>
 							<td>5</td>
 							<td>4.8</td>
 						</tr>
 						<tr>
-							<td>Bangla</td>
-							<td>89</td>
+							<td>Social Science</td>
+							<td><?php echo $result_data['social']; ?></td>
 							<td>5</td>
 							<td>4.8</td>
 						</tr>
 						<tr>
-							<td>Bangla</td>
-							<td>89</td>
+							<td>Science</td>
+							<td><?php echo $result_data['science']; ?></td>
 							<td>5</td>
 							<td>4.8</td>
 						</tr>
 						<tr>
-							<td>Bangla</td>
-							<td>89</td>
+							<td>Religion</td>
+							<td><?php echo $result_data['religion']; ?></td>
 							<td>5</td>
 							<td>4.8</td>
 						</tr>
