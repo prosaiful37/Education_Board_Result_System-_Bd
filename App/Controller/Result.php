@@ -16,7 +16,7 @@
 		public function  addResult($data)
 		{
 			$this -> create('results', [
-				'id'	=> $data['student_id'],
+				'student_id'	=> $data['student_id'],
 				'bangla'		=> $data['bangla'],
 				'english'		=> $data['english'],
 				'math'			=> $data['math'],

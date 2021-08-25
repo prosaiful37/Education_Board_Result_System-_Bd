@@ -1,3 +1,20 @@
+<?php 
+
+	if (isset($_POST['result'])) {
+		//get value
+		$exam = $_POST['exam'];
+		$board = $_POST['board'];
+		$year = $_POST['year'];
+		$roll = $_POST['roll'];
+		$reg = $_POST['reg'];
+	}else{
+		header('location:index.php');
+	}
+
+
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
