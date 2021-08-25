@@ -104,39 +104,39 @@
 						<tr>
 							<td>Bangla</td>
 							<td><?php echo $result_data['bangla']; ?></td>
-							<td>5</td>
-							<td>4.8</td>
+							<td><?php  $data = $res ->findGradeGpa($result_data['bangla']); echo $data['grade']; ?></td>
+							<td><?php  $data = $res ->findGradeGpa($result_data['bangla']); echo $data['gpa']; ?></td>
 							<td rowspan="6">4.8</td>
 						</tr>
 						<tr>
 							<td>English</td>
 							<td><?php echo $result_data['english']; ?></td>
-							<td>5</td>
-							<td>4.8</td>
+							<td><?php  $data = $res ->findGradeGpa($result_data['english']); echo $data['grade']; ?></td>
+							<td><?php  $data = $res ->findGradeGpa($result_data['english']); echo $data['gpa']; ?></td>
 						</tr>
 						<tr>
 							<td>Math</td>
 							<td><?php echo $result_data['math']; ?></td>
-							<td>5</td>
-							<td>4.8</td>
+							<td><?php  $data = $res ->findGradeGpa($result_data['math']); echo $data['grade']; ?></td>
+							<td><?php  $data = $res ->findGradeGpa($result_data['math']); echo $data['gpa']; ?></td>
 						</tr>
 						<tr>
 							<td>Social Science</td>
 							<td><?php echo $result_data['social']; ?></td>
-							<td>5</td>
-							<td>4.8</td>
+							<td><?php  $data = $res ->findGradeGpa($result_data['social']); echo $data['grade']; ?></td>
+							<td><?php  $data = $res ->findGradeGpa($result_data['social']); echo $data['gpa']; ?></td>
 						</tr>
 						<tr>
 							<td>Science</td>
 							<td><?php echo $result_data['science']; ?></td>
-							<td>5</td>
-							<td>4.8</td>
+							<td><?php  $data = $res ->findGradeGpa($result_data['science']); echo $data['grade']; ?></td>
+							<td><?php  $data = $res ->findGradeGpa($result_data['science']); echo $data['gpa']; ?></td>
 						</tr>
 						<tr>
 							<td>Religion</td>
 							<td><?php echo $result_data['religion']; ?></td>
-							<td>5</td>
-							<td>4.8</td>
+							<td><?php  $data = $res ->findGradeGpa($result_data['religion']); echo $data['grade']; ?></td>
+							<td><?php  $data = $res ->findGradeGpa($result_data['religion']); echo $data['gpa']; ?></td>
 						</tr>
 					</table>
 				</div>
