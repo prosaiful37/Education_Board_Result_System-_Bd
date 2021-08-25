@@ -71,7 +71,7 @@
                 </div>
                 <div class="form-group text-warning">
                     <label for="">Social Science</label>
-                    <input name="social_science" class="form-control" type="text">
+                    <input name="social" class="form-control" type="text">
                 </div>
                 <div class="form-group text-warning">
                     <label for="">Science</label>

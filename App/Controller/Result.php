@@ -9,20 +9,23 @@
 	 */
 	class Result extends Database
 	{
-		public function addResult($data)
+		/**
+		 * add result
+		 */
+
+		public function  addResult($data)
 		{
 			$this -> create('results', [
-				'student_id'	=> $data['student_id'],
+				'id'	=> $data['student_id'],
 				'bangla'		=> $data['bangla'],
 				'english'		=> $data['english'],
 				'math'			=> $data['math'],
-				'social'		=> $data['social_science'],
+				'social'		=> $data['social'],
 				'science'		=> $data['science'],
 				'religion'		=> $data['religion'],
-
 			]);
 		}
-
+ 
 	}
 
  ?>
