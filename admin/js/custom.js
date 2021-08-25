@@ -100,6 +100,8 @@
 		});
 
 
+
+
 		//add new student
 		$(document).on('submit','form#add_student_form', function(e){
 			e.preventDefault();
@@ -151,30 +153,9 @@
 			return false;
 		});
 
-		//single data show
-		// $(document).on('click','a#single_student',function(e){
-		// 	e.preventDefault();
 
-		// 	let id = $(this).attr('user_id');
-
-			
-
-		// 		$.ajax({
-		// 			url : "tamplates/ajax/single_student.php",
-		// 			method : "GET",
-		// 			data : {id : id},
-		// 			success : function(data){
-		// 				//$('.mess').html(data);
-		// 									}
-		// 		});
-
-		// 		allStudent();
-
-
-		// });
 
 		//search student
-
 		$(document).on('keyup','input#student_search', function(){
 			let stu_val = $(this).val();
 
@@ -214,11 +195,13 @@
 			$('.student_res_data img').attr('src', 'students/' + student_pic);
 			$('.student_res_data h2').html(stu_name);
 			$('.student_res_data h4').html('<strong> Roll : </strong>' + stu_roll + '<strong> Reg : </strong>' + stu_reg);
-
-
-
-
 		});
+
+
+		//alert function
+		function msgAlert(msg, type = 'success'){
+			return "<p class=\"alert alert-'+ type +'\">"+ msg +" ! <button class=\"close\" data-dismiss=\"alert\">&times;</button></p>"
+		}
 
 		//add student result
 
@@ -234,7 +217,11 @@
 				contentType : false,
 				processData : false,
 				success : function(data){
-					alert(data);
+					
+					$('form#add_student_result')[0].reset();
+					$('#add_result_modal').modal('hide');
+					$('.mess').html(msgAlert('Result added successful'));
+					$('.student_res_data').hide();
 
 				}
 

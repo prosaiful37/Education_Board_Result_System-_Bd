@@ -53,9 +53,9 @@
                 </div>
              <form id="add_student_result" action="" method="POST">
                 <div class="form-group text-warning">
-                    <div class="stu_res"></div>
                     <label id="idStudnet" for="">Search Student</label>
                     <input id="student_search" name="student_id" class="form-control" type="text">
+                    <div class="stu_res"></div>
                 </div>
                 <div class="form-group text-warning">
                     <label for="">Bangla</label>
@@ -95,6 +95,7 @@
     <div class="row">
         <div class="col-sm-12">
             <a id="add_result_btn" class="btn btn-sm btn-info" href="#">Add Student Result</a>
+            <div class="mess"></div>
             <br>
             <br>
     <section class="panel panel-default">
